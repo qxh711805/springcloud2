@@ -1,0 +1,28 @@
+server:
+  port: 4444
+spring:
+  application:
+    name: config-server
+  #  cloud:
+  #    config :
+  #      label: master     # git 分支
+  #      server:
+  #        git:
+  #          uri: https://gitee.com/shangzf/spring-cloud-config.git  # git地址
+             #     https://github.com/qxh711805/springcloudconfig.git
+  #          search-paths: config   # git中的文件夹
+  #          username:
+  #          password:
+#  kafka:
+#    bootstrap-servers: 10.0.0.155:9092
+#    template:
+#      default-topic: topicA
+
+  配置本地模式
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
